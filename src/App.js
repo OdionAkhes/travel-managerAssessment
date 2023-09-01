@@ -32,8 +32,8 @@ function App() {
         >
           <Route path="dashboard" element={<Dashboard user={user} />} />
           <Route path="clients" element={<Clients />} />
-          <Route path="client/:clientId" element={<ClientProfile />} />
-          {/* ... add other routes that should be a part of SharedLayout here */}
+          <Route path="clients/:email" element={<ClientProfile />} />
+    
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

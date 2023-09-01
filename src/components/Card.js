@@ -1,16 +1,21 @@
 /** @format */
 
-const Card = ({ header, content, size = "medium" }) => {
+const Card = ({ headerLeft, headerRight, content, size = "medium" }) => {
   const sizeClasses = {
-    small: "p-4",
-    medium: "p-6",
-    large: "p-8",
+    small: "w-3/4 ",
+    medium: "w-3/4",
+    large: "w-3/4",
   };
 
   return (
-    <div className={`card border-t-4  border-yellow-500 bg-white shadow-md ${sizeClasses[size]}`}>
-      <h4 className="text-md font-semibold mb-2">{header}</h4>
-      <p>{content}</p>
+    <div
+      className={`card bg-white border-t-4 border-yellow-500 shadow-md ${sizeClasses[size]}`}
+    >
+      <div className="header bg-yellow-50 p-2 flex justify-between">
+        <h4 className="text-sm font-semibold">{headerLeft}</h4>
+        {headerRight && <span className="text-sm text-yellow-500">{headerRight}</span>}
+      </div>
+      <div className="content p-4 text-xs text-gray-400">{content}</div>
     </div>
   );
 };
