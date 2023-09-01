@@ -12,7 +12,7 @@ const navigate = useNavigate();
     phone: "+234(0)8160730668",
     address: "No 2, Olonade Close, Monato, Ibadan Oyo State, Nigeria",
     nationality: "Nigerian",
-    age: "54", // Assuming this age for the example
+    age: "54", 
     country: "Nigeria, Uganda",
     passportName: "Odusote Mayorkun Kemi",
     occupation: "Engineer",

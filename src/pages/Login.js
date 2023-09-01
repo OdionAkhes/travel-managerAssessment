@@ -28,7 +28,7 @@ const Login = ({ setUser, setLoggedIn }) => {
             <p className="text-black text-xs">Login to your account</p>
           </div>
           <div>
-            {/* Placeholder for the logo */}
+   
             <span className="block bg-gray-300 h-12 w-12 rounded-full"></span>
           </div>
         </div>
