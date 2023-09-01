@@ -1,36 +1,38 @@
 /** @format */
 
-import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ClientProfile = () => {
-  const { email: encodedEmail } = useParams();
-  const email = decodeURIComponent(encodedEmail);
+  const { email } = useParams();
 
+const navigate = useNavigate();
   const client = {
     name: "Odusote Mayorkun",
     email: email,
-    phone: "18160730668",
+    phone: "+234(0)8160730668",
     address: "No 2, Olonade Close, Monato, Ibadan Oyo State, Nigeria",
     nationality: "Nigerian",
     age: "54", // Assuming this age for the example
     country: "Nigeria, Uganda",
+    passportName: "Odusote Mayorkun Kemi",
     occupation: "Engineer",
     COI: "Iceland",
     sex: "Female",
     education: "Bachelor's Degree",
     purpose: "Trading",
+    placeOfBirth: "Nigeria",
+maritalStatus: "married",
     DOB: "04/11/2012",
   };
 
   return (
     <div className="p-6 min-h-screen">
-      <h1 className="text-xl mb-4">Client Profile</h1>
+      <h1 className="text-l mb-2 text-black">Client Profile</h1>
       <h2 className="text-xs mb-6 text-gray-400">
         View client profile details below
       </h2>
-      <div className=" bg-white h-screen p-8 rounded-md">
-        <div className="bg-gray-50 p-4 rounded-md shadow-sm mb-6">
+      <div className=" bg-white  p-8 rounded-md">
+        <div className="bg-gray-50 p-4 rounded-md shadow-sm mb-14">
           <p className="text-black text-xs mb-4 font-semibold">
             Clients Picture
           </p>
@@ -52,42 +54,75 @@ const ClientProfile = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-8 mt-10">
           <div>
-            <p>Full Name:</p>
-            <p className="mb-4">{client.name}</p>
-            <p>Applicant Name (as in passport):</p>
-            <p className="mb-4">{client.passportName}</p>
-            <p>Place of Birth:</p>
-            <p className="mb-4">{client.placeOfBirth}</p>
-            <p>Date of Birth:</p>
-            <p className="mb-4">{client.DOB}</p>
-            <p>Marital Status:</p>
-            <p className="mb-4">{client.maritalStatus}</p>
-            <p>Current Occupation:</p>
-            <p className="mb-4">{client.occupation}</p>
-            <p>Address:</p>
-            <p className="mb-4">{client.address}</p>
-            <p>COI:</p>
-            <p>{client.COI}</p>
+            <p className="text-xs text-gray-400 mb-2">Full Name</p>
+            <p className="font-bold text-xs mb-4">{client.name}</p>
+
+            <p className="text-xs text-gray-400 mb-2">
+              Applicant Name{" "}
+              <span className="text-red-400">(as shown in passport)</span>
+            </p>
+            <p className="font-bold text-xs mb-4">{client.passportName}</p>
+
+            <div className="flex gap-20">
+              <div>
+                <p className="text-xs text-gray-400 mb-2">Place of Birth</p>
+                <p className="font-bold text-xs mb-4">{client.placeOfBirth}</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-400  mb-2">Date of Birth</p>
+                <p className="font-bold text-xs mb-4">{client.DOB}</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-gray-400 mb-2">Marital Status</p>
+            <p className="font-bold text-xs mb-4">{client.maritalStatus}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Current Occupation</p>
+            <p className="font-bold text-xs mb-4">{client.occupation}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Residential Address</p>
+            <p className="font-bold text-xs mb-4">{client.address}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Country of Interest</p>
+            <p className="font-bold text-xs">{client.COI}</p>
           </div>
           <div>
-            <p>Email:</p>
-            <p className="mb-4">{client.email}</p>
-            <p>Gender:</p>
-            <p className="mb-4">{client.sex}</p>
-            <p>Country of Citizenship:</p>
-            <p className="mb-4">{client.country}</p>
-            <p>Education:</p>
-            <p className="mb-4">{client.education}</p>
-            <p>Phone Number:</p>
-            <p className="mb-4">{client.phone}</p>
-            <p>Mailing Address:</p>
-            <p className="mb-4">{client.mailingAddress}</p>
-            <p>Purpose of Traveling:</p>
-            <p>{client.purpose}</p>
+            <p className="text-xs text-gray-400 mb-2">Email</p>
+            <p className="font-bold text-xs mb-4">{client.email}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Gender</p>
+            <p className="font-bold text-xs mb-4">{client.sex}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Country of Citizenship</p>
+            <p className="font-bold text-xs mb-4">{client.country}</p>
+
+            <p className="text-xs text-gray-400 mb-2">
+              Education
+              <span className="text-red-400">
+                {" "}
+                (Client's highest level of education)
+              </span>
+            </p>
+            <p className="font-bold text-xs mb-4">{client.education}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Phone Number</p>
+            <p className="font-bold text-xs mb-4">{client.phone}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Mailing Address</p>
+            <p className="font-bold text-xs mb-4">{client.address}</p>
+
+            <p className="text-xs text-gray-400 mb-2">Purpose of Traveling</p>
+            <p className="font-bold text-xs">{client.purpose}</p>
           </div>
         </div>
+        <button
+          onClick={() => navigate("/clients")}
+          className="ml-auto flex justify-end bg-yellow-500 text-white py-1 text-sm px-8 rounded mt-4"
+        >
+          Back
+        </button>
       </div>
     </div>
   );
