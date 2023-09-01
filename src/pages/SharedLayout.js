@@ -17,7 +17,7 @@ const SharedLayout = ({ user }) => {
       <div className="flex">
         <Sidebar isOpen={sidebarOpen} />
         <main
-          className={`h-screen flex-grow p-5 bg-gray-300 transition-margin duration-300 ${
+          className={`h-screen flex-grow p-5 bg-gray-50 transition-margin duration-300 ${
             sidebarOpen ? "ml-60" : "ml-0"
           }`}
         >

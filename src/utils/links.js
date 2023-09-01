@@ -1,36 +1,48 @@
+/** @format */
+
+import {
+  FaSpaceShuttle,
+  FaUsers,
+  FaClock,
+  FaCreditCard,
+  FaTasks,
+  FaEnvelope,
+  FaChartLine,
+} from "react-icons/fa";
 export const links = [
   {
     name: "Workspace",
     path: "/dashboard",
-    icon: "",
+    icon: <FaSpaceShuttle />,
   },
-    {
-        name: "Clients", path: "/clients",
-    icon: ""
+  {
+    name: "Clients",
+    path: "/clients",
+    icon: <FaUsers />,
   },
   {
     name: "Schedule Appointment",
-    path:
-      "/schedule", icon: ""
+    path: "/schedule",
+    icon: <FaClock />,
   },
   {
     name: "Payment",
     path: "/payment",
-    icon: ""
+    icon: <FaCreditCard />,
   },
   {
     name: "Task",
     path: "/task",
-    icon: ""
+    icon: <FaTasks />,
   },
   {
     name: "Message",
     path: "/message",
-    icon: ""
+    icon: <FaEnvelope />,
   },
   {
     name: "Reports",
-    path: ".reports",
-    icon: ""
-  }
+    path: "/reports",
+    icon: <FaChartLine />,
+  },
 ];
