@@ -3,6 +3,8 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import bgImage from "../assets/bg-img.png"; 
+
 
 const Login = ({ setUser, setLoggedIn }) => {
   const [email, setEmail] = useState("");
@@ -20,7 +22,14 @@ const Login = ({ setUser, setLoggedIn }) => {
         }
     }
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-500 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-500 to-white py-12 px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+      }}
+    >
       <div className="max-w-sm w-full bg-white p-6  shadow-md">
         <div className="flex justify-between items-center mb-8">
           <div className="gap-1 grid">
@@ -28,7 +37,6 @@ const Login = ({ setUser, setLoggedIn }) => {
             <p className="text-black text-xs">Login to your account</p>
           </div>
           <div>
-   
             <span className="block bg-gray-300 h-12 w-12 rounded-full"></span>
           </div>
         </div>
