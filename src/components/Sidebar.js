@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen }) => {
       <div className="mx-auto block m-4 bg-gray-300 h-20 w-20 rounded-full"></div>
       <ul className="space-y-10">
         {links.map((link) => (
-          <li key={link.name} className="mb-2 ">
+          <li key={link.name} className="mb-2 cursor-pointer">
             <NavLink
               to={link.path}
               className={({ isActive }) =>

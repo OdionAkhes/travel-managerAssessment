@@ -23,21 +23,21 @@ const Login = ({ setUser, setLoggedIn }) => {
     }
   return (
     <div
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-500 to-white py-12 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center  py-12 px-4 sm:px-6 lg:px-8"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
       }}
     >
-      <div className="max-w-sm w-full bg-white p-6  shadow-md">
+      <div className="max-w-md w-full bg-white p-10  shadow-md">
         <div className="flex justify-between items-center mb-8">
           <div className="gap-1 grid">
             <h3 className=" font-bold text-gray-900">Login</h3>
             <p className="text-black text-xs">Login to your account</p>
           </div>
           <div>
-            <span className="block bg-gray-300 h-12 w-12 rounded-full"></span>
+            <span className="block border-4 border-yellow-500 bg-gray-300 h-14 w-14 rounded-full"></span>
           </div>
         </div>
         <form onSubmit={handleSubmit}>

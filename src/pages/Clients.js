@@ -14,11 +14,11 @@ const Clients = () => {
 }
 
   return (
-    <div className="p-6 min-h-screen">
+    <div className="p-6 h-full min-h-screen">
       <h1 className="text-xl mb-1 text-black">Clients</h1>
       <h2 className="text-sm mb-6 text-gray-400">Here's the clients list</h2>
 
-      <div className="bg-white p-6 rounded-md shadow-sm">
+      <div className="bg-white p-6 rounded-md shadow-sm min-h-screen">
         <div className="flex mb-6">
           <input
             type="search"

@@ -26,7 +26,7 @@ maritalStatus: "married",
   };
 
   return (
-    <div className="p-6 min-h-screen">
+    <div className="p-6 min-h-screen ">
       <h1 className="text-l mb-2 text-black">Client Profile</h1>
       <h2 className="text-xs mb-6 text-gray-400">
         View client profile details below
@@ -61,7 +61,7 @@ maritalStatus: "married",
 
             <p className="text-xs text-gray-400 mb-2">
               Applicant Name{" "}
-              <span className="text-red-400">(as shown in passport)</span>
+              <span className="text-red-500">(as shown in passport)</span>
             </p>
             <p className="font-bold text-xs mb-4">{client.passportName}</p>
 
@@ -100,7 +100,7 @@ maritalStatus: "married",
 
             <p className="text-xs text-gray-400 mb-2">
               Education
-              <span className="text-red-400">
+              <span className="text-red-500">
                 {" "}
                 (Client's highest level of education)
               </span>
