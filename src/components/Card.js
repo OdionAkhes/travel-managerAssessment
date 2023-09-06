@@ -1,4 +1,3 @@
-/** @format */
 
 const Card = ({ headerLeft, headerRight, content, size = "medium" }) => {
   const sizeClasses = {
@@ -25,3 +24,6 @@ const Card = ({ headerLeft, headerRight, content, size = "medium" }) => {
 };
 
 export default Card;
+
+
+

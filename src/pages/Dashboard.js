@@ -24,13 +24,13 @@ const Dashboard = ({ user }) => {
           />
           <Card
             headerLeft="Tasks that are due"
-            headerRight="Create Task →"
+            headerRight="Create Tasks →"
             content={
-              <div className="bg-yellow-50 p-4">
-                <div className="font-bold mb-2">Follow up with <span className="text-yellow-500">Odusote</span></div>
-                <div className="flex justify-between mt-2">
-                  <span>Due on 1/21/2021</span>
-                  <span>Created on 1/15/2021</span>
+              <div className="bg-yellow-50 p-1  mb-8">
+                <div className="font-bold mb-2 text-black">Follow up with <span className="text-yellow-500">Odusote</span></div>
+                <div className=" flex gap-4 mt-2 text-black">
+                  <span>Due on: 1/21/2021</span>
+                  <span>Created on: 1/15/2021</span>
                 </div>
               </div>
             }
@@ -42,18 +42,18 @@ const Dashboard = ({ user }) => {
             headerLeft="Activity Report"
             headerRight="View Full Activity Report →"
             content={
-              <div className="bg-yellow-50 p-4">
-                <div className="flex items-center mb-2">
+              <div className=" mb-8">
+                <div className="flex items-center ">
                   <div className="border-l-2 border-gray-400 flex-grow mr-2"></div>
                   <div>Tuesday (18th Sep 2019)</div>
                 </div>
-                <div className="mb-2">You added a new client.</div>
-                <div className="bg-yellow-500 text-xs p-1 font-bold">
+                <div className="">You added a new client.</div>
+                <div className="pl-10 text-xs font-bold text-yellow-500">
                   Odusote Mayorkun
                 </div>
-                <div className="bg-yellow-500 text-xs p-1 mt-1">
+                <p className="border-l-2 border-yellow-500 bg-yellow-50 text-xs p-1 mt-1 ml-10 ">
                   Status: Pending
-                </div>
+                </p>
               </div>
             }
             size="large"
