@@ -26,7 +26,7 @@ const Dashboard = ({ user }) => {
             headerLeft="Tasks that are due"
             headerRight="Create Tasks →"
             content={
-              <div className="bg-yellow-50 p-1  mb-8">
+              <div className="bg-yellow-50 p-3  mb-8">
                 <div className="font-bold mb-2 text-black">Follow up with <span className="text-yellow-500">Odusote</span></div>
                 <div className=" flex gap-4 mt-2 text-black">
                   <span>Due on: 1/21/2021</span>

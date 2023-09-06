@@ -1,19 +1,20 @@
 /** @format */
 
 import {
-  FaSpaceShuttle,
+  FaThLarge,
   FaUsers,
-  FaClock,
-  FaCreditCard,
+  FaRegClock,
+  FaRegMoneyBillAlt,
   FaTasks,
-  FaEnvelope,
-  FaChartLine,
+  FaRegCommentDots,
+  FaRegClipboard,
 } from "react-icons/fa";
+
 export const links = [
   {
     name: "Workspace",
     path: "/dashboard",
-    icon: <FaSpaceShuttle />,
+    icon: <FaThLarge />, 
   },
   {
     name: "Clients",
@@ -23,12 +24,12 @@ export const links = [
   {
     name: "Schedule Appointment",
     path: "/schedule",
-    icon: <FaClock />,
+    icon: <FaRegClock />, // Clock outline
   },
   {
     name: "Payment",
     path: "/payment",
-    icon: <FaCreditCard />,
+    icon: <FaRegMoneyBillAlt />, // Money or invoice outline
   },
   {
     name: "Task",
@@ -38,11 +39,11 @@ export const links = [
   {
     name: "Message",
     path: "/message",
-    icon: <FaEnvelope />,
+    icon: <FaRegCommentDots />, // Comment with dots outline
   },
   {
     name: "Reports",
     path: "/reports",
-    icon: <FaChartLine />,
+    icon: <FaRegClipboard />, // Clipboard outline
   },
 ];
