@@ -1,17 +1,18 @@
+/** @format */
 
 import React from "react";
 import Card from "../components/Card";
 
 const Dashboard = ({ user }) => {
   return (
-    <div className="workspace mt-6 px-8">
-      <h1 className="mb-1 text-md  font-semibold">Your Workspace</h1>
+    <div className="workspace mt-6 px-4 sm:px-8">
+      <h1 className="mb-1 text-md font-semibold">Your Workspace</h1>
       <h2 className="text-sm text-gray-300 mb-6">
         Welcome, {user.name || "xxx"}
       </h2>
       <h3 className="text-sm font-semibold mb-4">Overview</h3>
-      <div className="cards-container flex space-x-2">
-        <div className="left flex-1 space-y-6">
+      <div className="cards-container flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="left w-full sm:flex-1 space-y-6">
           <Card
             headerLeft="Today's Agenda"
             content={
@@ -26,9 +27,12 @@ const Dashboard = ({ user }) => {
             headerLeft="Tasks that are due"
             headerRight="Create Tasks →"
             content={
-              <div className="bg-yellow-50 p-3  mb-8">
-                <div className="font-bold mb-2 text-black">Follow up with <span className="text-yellow-500">Odusote</span></div>
-                <div className=" flex gap-4 mt-2 text-black">
+              <div className="bg-yellow-50 p-3 mb-8">
+                <div className="font-bold mb-2 text-black">
+                  Follow up with{" "}
+                  <span className="text-yellow-500">Odusote</span>
+                </div>
+                <div className="flex gap-4 mt-2 text-black">
                   <span>Due on: 1/21/2021</span>
                   <span>Created on: 1/15/2021</span>
                 </div>
@@ -37,12 +41,12 @@ const Dashboard = ({ user }) => {
             size="large"
           />
         </div>
-        <div className="right flex-1">
+        <div className="right w-full sm:flex-1">
           <Card
             headerLeft="Activity Report"
             headerRight="View Full Activity Report →"
             content={
-              <div className=" mb-8">
+              <div className="mb-8">
                 <div className="flex items-center ">
                   <div className="border-l-2 border-gray-400 flex-grow mr-2"></div>
                   <div>Tuesday (18th Sep 2019)</div>
@@ -51,7 +55,7 @@ const Dashboard = ({ user }) => {
                 <div className="pl-10 text-xs font-bold text-yellow-500">
                   Odusote Mayorkun
                 </div>
-                <p className="border-l-2 border-yellow-500 bg-yellow-50 text-xs p-1 mt-1 ml-10 ">
+                <p className="border-l-2 border-yellow-500 bg-yellow-50 text-xs p-1 mt-1 ml-10">
                   Status: Pending
                 </p>
               </div>

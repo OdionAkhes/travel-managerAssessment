@@ -1,10 +1,11 @@
 
 const Card = ({ headerLeft, headerRight, content, size = "medium" }) => {
-  const sizeClasses = {
-    small: "w-3/4 h-auto",
-    medium: "w-3/4 h-auto",
-    large: "w-3/4 h-auto",
-  };
+const sizeClasses = {
+  small: "w-full sm:w-3/4 h-auto",
+  medium: "w-full sm:w-3/4 h-auto",
+  large: "w-full sm:w-3/4 h-auto",
+};
+
 
   return (
     <div
